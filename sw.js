@@ -3,14 +3,14 @@ const APP_CACHE = `app-shell-${CACHE_VERSION}`;
 const DYNAMIC_CACHE = `dynamic-cache-${CACHE_VERSION}`;
 
 const APP_SHELL = [
-  "/",
-  "/index.html",
-  "/calendar.html",
-  "/form.html",
-  "/main.js",
-  "/manifest.json",
-  "/images/icons/192.png",
-  "/images/icons/512.png",
+  "./",
+  "./index.html",
+  "./calendar.html",
+  "./form.html",
+  "./main.js",
+  "./manifest.json",
+  "./images/icons/192.png",
+  "./images/icons/512.png",
 ];
 
 self.addEventListener("install", (event) => {
