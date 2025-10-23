@@ -3,13 +3,16 @@ const APP_CACHE = `app-shell-${CACHE_VERSION}`;
 const DYNAMIC_CACHE = `dynamic-cache-${CACHE_VERSION}`;
 
 const APP_SHELL = [
-  "index.html",
-  "calendar.html",
-  "form.html",
-  "main.js",
-  "manifest.json",
-  "images/icons/192.png",
-  "images/icons/512.png",
+  "/",
+  "/index.html",
+  "/calendar.html",
+  "/form.html",
+  "/main.js",
+  "/manifest.json",
+  "/images/icons/icon-192x192.png",
+  "/images/icons/icon-512x512.png",
+  "/images/icons/icon-192x192.png",
+  "/images/icons/icon-512x512.png",
 ];
 
 self.addEventListener("install", (event) => {
@@ -18,9 +21,6 @@ self.addEventListener("install", (event) => {
       .open(APP_CACHE)
       .then((cache) => cache.addAll(APP_SHELL))
       .then(() => self.skipWaiting())
-      .catch((err) => {
-        console.error("[SW] Install/caching failed:", err);
-      })
   );
 });
 
@@ -63,8 +63,7 @@ self.addEventListener("fetch", (event) => {
         })
         .catch(() => {
           if (event.request.mode === "navigate") {
-            // Return the cached index.html for navigations when offline.
-            return caches.match("index.html");
+            return caches.match("/index.html");
           }
         });
     })
