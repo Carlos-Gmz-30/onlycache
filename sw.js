@@ -9,10 +9,8 @@ const APP_SHELL = [
   "/form.html",
   "/main.js",
   "/manifest.json",
-  "/images/icons/icon-192x192.png",
-  "/images/icons/icon-512x512.png",
-  "/images/icons/icon-192x192.png",
-  "/images/icons/icon-512x512.png",
+  "/images/icons/192.png",
+  "/images/icons/512.png",
 ];
 
 self.addEventListener("install", (event) => {
