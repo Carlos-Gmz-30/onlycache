@@ -1,4 +1,4 @@
-const CACHE_SW_PATH = "/sw.js";
+const CACHE_SW_PATH = "./sw.js";
 
 async function registerServiceWorker() {
   if ("serviceWorker" in navigator) {
