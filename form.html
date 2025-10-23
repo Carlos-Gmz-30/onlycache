@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- PWA manifest + theme color -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#0ea5a4" />
+
+    <!-- iOS support -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <link rel="apple-touch-icon" href="/images/icons/192.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="/images/icons/512.png">
+
+    <title>Form</title>
+  </head>
+  <body>
+    <div class="h-screen flex flex-col items-center justify-center relative">
+      <nav
+        class="absolute top-0 left-1/2 transform -translate-x-1/2 flex gap-4 mt-4"
+      >
+        <a href="./index.html">Inicio</a>
+        <a href="./calendar.html">Calendar</a>
+        <a href="./form.html">Formulario</a>
+      </nav>
+      <h1
+        class="text-3xl font-bold uppercase flex-1 flex items-center justify-center w-full"
+      >
+        Formularios
+      </h1>
+      <main class="w-full max-w-lg px-4 pb-16">
+        <form
+          id="sample-form"
+          class="space-y-4 bg-white/5 p-6 rounded-lg shadow-md"
+        >
+          <div>
+            <label class="block text-sm font-medium mb-1" for="firstName"
+              >Nombre</label
+            >
+            <input
+              id="firstName"
+              name="firstName"
+              type="text"
+              class="w-full border rounded px-3 py-2"
+            />
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-1" for="lastName"
+              >Apellido</label
+            >
+            <input
+              id="lastName"
+              name="lastName"
+              type="text"
+              class="w-full border rounded px-3 py-2"
+            />
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-1" for="email"
+              >Email</label
+            >
+            <input
+              id="email"
+              name="email"
+              type="email"
+              class="w-full border rounded px-3 py-2"
+            />
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium mb-1" for="favorite"
+              >Favorito</label
+            >
+            <select
+              id="favorite"
+              name="favorite"
+              class="w-full js-select2 border rounded px-2 py-2"
+            >
+              <option value="">-- Elige una opción --</option>
+              <option value="op1">Opción 1</option>
+              <option value="op2">Opción 2</option>
+              <option value="op3">Opción 3</option>
+            </select>
+          </div>
+
+          <div class="pt-2">
+            <button
+              type="submit"
+              class="bg-blue-600 text-white px-4 py-2 rounded"
+            >
+              Enviar
+            </button>
+          </div>
+        </form>
+      </main>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
