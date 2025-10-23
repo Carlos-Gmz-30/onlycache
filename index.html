@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <!-- PWA manifest + theme color -->
-    <link rel="manifest" href="/manifest.json" />
+  <!-- PWA manifest + theme color -->
+  <!-- Use relative paths so the files are resolved correctly on GitHub Pages project sites -->
+  <link rel="manifest" href="manifest.json" />
     <meta name="theme-color" content="#0ea5a4" />
 
     <!-- iOS support -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- Recommended meta to avoid deprecation warning in some browsers -->
+    <meta name="mobile-web-app-capable" content="yes" />
     <meta
       name="apple-mobile-web-app-status-bar-style"
       content="black-translucent"
     />
-    <link rel="apple-touch-icon" href="/images/icons/192.png" sizes="192x192" />
-    <link rel="apple-touch-icon-precomposed" href="/images/icons/512.png" />
+    <link rel="apple-touch-icon" href="images/icons/192.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="images/icons/512.png" />
 
     <title>Inicio</title>
   </head>

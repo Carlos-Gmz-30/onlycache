@@ -1,4 +1,6 @@
-const CACHE_SW_PATH = "/sw.js";
+// Use a relative path so the service worker is fetched from the current
+// repository path (works for GitHub Pages project sites).
+const CACHE_SW_PATH = "sw.js";
 
 async function registerServiceWorker() {
   if ("serviceWorker" in navigator) {

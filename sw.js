@@ -3,14 +3,13 @@ const APP_CACHE = `app-shell-${CACHE_VERSION}`;
 const DYNAMIC_CACHE = `dynamic-cache-${CACHE_VERSION}`;
 
 const APP_SHELL = [
-  "/",
-  "/index.html",
-  "/calendar.html",
-  "/form.html",
-  "/main.js",
-  "/manifest.json",
-  "/images/icons/192.png",
-  "/images/icons/512.png",
+  "index.html",
+  "calendar.html",
+  "form.html",
+  "main.js",
+  "manifest.json",
+  "images/icons/192.png",
+  "images/icons/512.png",
 ];
 
 self.addEventListener("install", (event) => {
@@ -64,7 +63,8 @@ self.addEventListener("fetch", (event) => {
         })
         .catch(() => {
           if (event.request.mode === "navigate") {
-            return caches.match("/index.html");
+            // Return the cached index.html for navigations when offline.
+            return caches.match("index.html");
           }
         });
     })
